@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+
+  &__logo {
+    height: 40px;
+  }
+
+  &__nav a {
+    text-decoration: none;
+    color: #ff6060;
+    margin-left: 30px;
+
+    &.active,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

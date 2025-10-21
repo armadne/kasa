@@ -1,0 +1,9 @@
+@import './variables';
+@import './mixins';
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #333;
+}

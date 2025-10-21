@@ -1,11 +1,17 @@
-import { Link } from "react-router-dom";
+import "../styles/Header.scss";
+import logo from "../assets/logo.png";
 
-export default function Header() {
+
+function Header() {
   return (
-    <header>
-      <nav>
-        <Link to="/">Accueil</Link> | <Link to="/about">À propos</Link>
+    <header className="header">
+      <img src={logo} alt="Kasa logo" className="header__logo" />
+      <nav className="header__nav">
+        <a href="#" className="active">Accueil</a>
+        <a href="#">À propos</a>
       </nav>
     </header>
   );
 }
+
+export default Header;
