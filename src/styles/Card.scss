@@ -1,20 +1,27 @@
 .card {
-  position: relative;
+  background-color: #ff5a5f;
   border-radius: 10px;
   overflow: hidden;
-  cursor: pointer;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
 
   &__img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(80%);
+    z-index: 0;
   }
 
   &__title {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
+    position: relative;
+    z-index: 1;
     font-size: 1rem;
   }
 }

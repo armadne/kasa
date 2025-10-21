@@ -1,15 +1,13 @@
 import "../styles/Banner.scss";
-//import background from "../assets/banner.png";
+import bannerImg from "../assets/banniere-home.png";
 
-/*
 function Banner() {
   return (
     <div className="banner">
-      <img src={background} alt="Paysage" className="banner__img" />
-      <h1 className="banner__text">Chez vous, partout et ailleurs</h1>
+      <img src={bannerImg} alt="Bord de mer" className="banner__img" />
+      <h1 className="banner__text"></h1>
     </div>
   );
 }
 
 export default Banner;
-*/

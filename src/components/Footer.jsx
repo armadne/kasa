@@ -1,6 +1,6 @@
 import "../styles/Footer.scss";
-//import logo from "../assets/logo-white.png";
-/*
+import logo from "../assets/logo.png";
+
 function Footer() {
   return (
     <footer className="footer">
@@ -11,4 +11,3 @@ function Footer() {
 }
 
 export default Footer;
-*/
