@@ -4,8 +4,10 @@ import "../styles/Card.scss";
 function Card({ id, title, cover }) {
   return (
     <Link to={`/logement/${id}`} className="card">
-      <img src={cover} alt={title} />
-      <h3>{title}</h3>
+      <img src={cover} alt={title} className="card__img" />
+      <div className="card__overlay">
+        <h3 className="card__title">{title}</h3>
+      </div>
     </Link>
   );
 }
