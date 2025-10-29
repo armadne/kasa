@@ -1,0 +1,74 @@
+.collapse {
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background: transparent; //
+  
+
+  .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    color: white;
+    padding: 12px 15px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .collapse-arrow {
+      width: 15px;
+      
+      transition: transform 0.3s ease; // rotation uniquement
+    }
+  }
+
+  .collapse-content {
+    background-color: #f6f6f6;
+    color: #333;
+    padding: 0 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-radius: 0 0 5px 5px;
+
+    // Animation d'ouverture/fermeture fluide
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+
+      li {
+        margin-bottom: 4px;
+      }
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  }
+
+  &.open {
+    .collapse-content {
+      max-height: 500px; // s’adapte à tout contenu
+      opacity: 1;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .collapse-arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
