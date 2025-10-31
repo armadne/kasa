@@ -8,14 +8,63 @@
     height: 50px;
   }
 
-  &__nav a {
-    margin-left: 2rem;
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem; // espace entre "Accueil" et "A Propos"
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      text-transform: uppercase; // texte en majuscules
+      font-size: 1.1rem;
+
+      &.active {
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        text-decoration-color: #ff6060; // couleur de soulignement rouge Kasa
+      }
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: #ff6060;
+      }
+    }
   }
 
-  &__nav .active {
-    text-decoration: underline;
+  // ---------- RESPONSIVE ----------
+  @media (max-width: 768px) {
+    margin: 1.5rem 1rem;
+    flex-wrap: wrap; // permet au menu de passer à la ligne si manque d’espace
+
+    &__logo {
+      height: 40px;
+    }
+
+    &__nav {
+      gap: 1.5rem;
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+
+    &__logo {
+      height: 35px;
+    }
+
+    &__nav {
+      gap: 1rem;
+
+      a {
+        font-size: 0.85rem;
+      }
+    }
   }
 }
