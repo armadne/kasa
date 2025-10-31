@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .card {
   background-color: #ff5a5f;
   border-radius: 10px;
@@ -8,9 +10,9 @@
   align-items: flex-end;
   justify-content: flex-start;
   padding: 1rem;
-  height: 250px; /* Hauteur fixe pour un rendu harmonieux */
+  height: 250px; 
   width: 100%;
-  max-width: 340px; /* Largeur maximale d'une card */
+  max-width: 340px; 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 
@@ -19,14 +21,14 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
-  /* ✅ Correction ici */
+  
   img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Remplit la card sans déformation */
-    object-position: center center; /* Centre l'image horizontalement et verticalement */
+    object-fit: cover; 
+    object-position: center center; 
     filter: brightness(80%);
     z-index: 0;
   }
@@ -39,7 +41,7 @@
   }
 }
 
-/* ✅ Conteneur principal des cards (utile si pas déjà dans Home.scss) */
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
