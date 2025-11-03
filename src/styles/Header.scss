@@ -11,19 +11,20 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: 3rem; // espace entre "Accueil" et "A Propos"
+    gap: 3rem;
 
     a {
       text-decoration: none;
       color: black;
       font-weight: 500;
-      text-transform: uppercase; // texte en majuscules
       font-size: 1.1rem;
+      text-transform: none; // ✅ texte normal sur desktop
+      transition: all 0.2s ease;
 
       &.active {
         text-decoration: underline;
         text-underline-offset: 5px;
-        text-decoration-color: #ff6060; // couleur de soulignement rouge Kasa
+        text-decoration-color: #ff6060;
       }
 
       &:hover {
@@ -36,16 +37,18 @@
   // ---------- RESPONSIVE ----------
   @media (max-width: 768px) {
     margin: 1.5rem 1rem;
-    flex-wrap: wrap; // permet au menu de passer à la ligne si manque d’espace
+    flex-wrap: wrap;
 
     &__logo {
       height: 40px;
     }
 
     &__nav {
-      gap: 1.5rem;
+      gap: 2rem;
+
       a {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        text-transform: uppercase; // ✅ texte en majuscules sur mobile
       }
     }
   }
@@ -60,10 +63,11 @@
     }
 
     &__nav {
-      gap: 1rem;
+      gap: 1.2rem;
 
       a {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+        text-transform: uppercase; // ✅ reste en majuscules
       }
     }
   }
