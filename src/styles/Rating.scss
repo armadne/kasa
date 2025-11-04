@@ -1,0 +1,21 @@
+.rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  .star {
+    color: #e3e3e3;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+
+    &.filled {
+      color: #ff6060; // couleur de l'étoile remplie
+    }
+  }
+
+  @media (max-width: 768px) {
+    .star {
+      font-size: 1.1rem;
+    }
+  }
+}
