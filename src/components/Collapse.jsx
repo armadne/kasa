@@ -1,9 +1,7 @@
 import { useState } from "react";
-import arrowDown from "../assets/arrow-down.png";
-import arrowUp from "../assets/arrow-up.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Collapse.scss";
-
-
 
 function Collapse({ title, content }) {
   const [open, setOpen] = useState(false);
@@ -12,10 +10,9 @@ function Collapse({ title, content }) {
     <div className={`collapse ${open ? "open" : ""}`}>
       <div className="collapse-header" onClick={() => setOpen(!open)}>
         <h3>{title}</h3>
-        <img
-          src={open ? arrowUp : arrowDown}
-          alt={open ? "Flèche vers le haut" : "Flèche vers le bas"}
-          className="collapse-arrow"
+        <FontAwesomeIcon
+          icon={faChevronUp}
+          className={`collapse-arrow ${open ? "rotated" : ""}`}
         />
       </div>
       {open && <div className="collapse-content">{content}</div>}

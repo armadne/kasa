@@ -1,74 +1,38 @@
 .collapse {
-  width: 100%;
+  margin-bottom: 1rem;
   border-radius: 5px;
-  transition: all 0.3s ease;
-  background: transparent; //
-  
+  overflow: hidden;
+  background-color: #f6f6f6;
 
   .collapse-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    cursor: pointer;
     background-color: #ff6060;
     color: white;
-    padding: 12px 15px;
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
     border-radius: 5px;
-    user-select: none;
 
     h3 {
       margin: 0;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     .collapse-arrow {
-      width: 15px;
-      
-      transition: transform 0.3s ease; // rotation uniquement
+      transition: transform 0.3s ease;
+      font-size: 1.2rem;
+    }
+
+    .rotated {
+      transform: rotate(180deg);
     }
   }
 
   .collapse-content {
-    background-color: #f6f6f6;
+    padding: 1rem;
     color: #333;
-    padding: 0 15px;
-    font-size: 0.95rem;
+    background-color: #f7f7f7;
     line-height: 1.5;
-    border-radius: 0 0 5px 5px;
-
-    // Animation d'ouverture/fermeture fluide
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 10px 0;
-
-      li {
-        margin-bottom: 4px;
-      }
-    }
-
-    p {
-      margin: 10px 0;
-    }
-  }
-
-  &.open {
-    .collapse-content {
-      max-height: 500px; // s’adapte à tout contenu
-      opacity: 1;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
-    .collapse-arrow {
-      transform: rotate(180deg);
-    }
   }
 }
