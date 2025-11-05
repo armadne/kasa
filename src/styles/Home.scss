@@ -20,7 +20,7 @@
 /* ✅ Responsive : mode smartphone */
 @media screen and (max-width: 768px) {
   .home {
-    padding: 0 1rem; /* <-- ajoute un écart global à gauche/droite */
+    padding: 15px 1rem; /* <-- ajoute un écart global à gauche/droite */
   }
 
   .home__grid {
