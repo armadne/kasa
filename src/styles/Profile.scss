@@ -1,5 +1,6 @@
 .profile {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
@@ -20,9 +21,10 @@
     object-fit: cover;
   }
 
-  // ----- Responsive -----
+  /* ----- Responsive (mobile ≤ 768px) ----- */
   @media (max-width: 768px) {
-    flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row; /* ✅ selon ta demande */
     justify-content: flex-end;
     align-items: center;
     gap: 8px;
@@ -43,16 +45,16 @@
 
 /* 🔹 Conteneur combiné profil + rating */
 .profile-rating {
-  display: flex;
-  align-items: center;
-  
-  gap: 1rem;
-  margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
 
   @media (max-width: 768px) {
     width: 100%;
     justify-content: space-between;
-    display: flex;
     flex-direction: row-reverse;
+    display: flex;
   }
 }

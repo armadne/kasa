@@ -2,18 +2,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //gap: 2rem;
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    justify-items: center; /* Centrage horizontal des cards */
+    justify-items: center;
     gap: 2rem;
-    margin: 1rem 2rem;
+    margin: 0rem 2rem;
     background: #f6f6f6;
     padding: 3rem 2rem;
     border-radius: 1rem;
     width: 100%;
-    max-width: 1200px; /* limite la largeur max du conteneur */
+    max-width: 1200px;
+  }
+}
+
+/* ✅ Responsive : mode smartphone */
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 0 1rem; /* <-- ajoute un écart global à gauche/droite */
+  }
+
+  .home__grid {
+    grid-template-columns: 1fr;
+    margin: 0; /* on supprime la marge horizontale interne */
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
   }
 }
