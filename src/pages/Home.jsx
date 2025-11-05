@@ -2,12 +2,14 @@ import Banner from "../components/Banner";
 import Card from "../components/Card";
 import "../styles/Home.scss";
 import logements from "../data/logements.json";
-import bannerHomeNew from "../assets/banniere-home-new.png"; 
+import bannerHomeNew from "../assets/banniere-home.png"; 
 
 function Home() {
   return (
     <main className="home">
-      <Banner image={bannerHomeNew} text={"Chez vous,\npartout et ailleurs"} />
+      {/* Ajout de la classe spécifique "home-banner" */}
+      <Banner image={bannerHomeNew} text={"Chez vous,\npartout et ailleurs"} className="home-banner" />
+      
       <section className="home__grid">
         {logements.map((logement) => (
           <Card

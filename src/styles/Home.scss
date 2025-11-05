@@ -17,16 +17,36 @@
   }
 }
 
+/* Assombrissement de la bannière uniquement pour Home */
+.home-banner {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* assombrissement 40% */
+    z-index: 1;
+    border-radius: 25px;
+  }
+
+  .banner__img {
+    filter: brightness(60%); /* assombrir l'image */
+  }
+}
+
 /* ✅ Responsive : mode smartphone */
 @media screen and (max-width: 768px) {
   .home {
-    padding: 15px 1rem; /* <-- ajoute un écart global à gauche/droite */
+    padding: 15px 1rem;
   }
 
   .home__grid {
     grid-template-columns: 1fr;
-    margin: 0; /* on supprime la marge horizontale interne */
+    margin: 0;
     padding: 1.5rem 1rem;
     border-radius: 0.5rem;
+  }
+
+  .home-banner::after {
+    border-radius: 18px;
   }
 }
