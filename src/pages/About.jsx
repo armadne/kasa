@@ -6,7 +6,7 @@ import bannerAbout from "../assets/banniere-about.png";
 function About() {
   return (
     <div className="about-page">
-      {/* Ajout de la classe spécifique "about-banner" */}
+      
       <Banner image={bannerAbout} className="about-banner" /> 
 
       <div className="about-collapses">

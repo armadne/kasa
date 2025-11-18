@@ -1,4 +1,4 @@
-// components/Profile.jsx
+
 import "../styles/Profile.scss";
 
 function Profile({ name, picture }) {

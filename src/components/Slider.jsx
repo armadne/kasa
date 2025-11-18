@@ -1,4 +1,4 @@
-// components/Slider.jsx
+
 import { useState } from "react";
 import arrowLeft from "../assets/arrow-left.png";
 import arrowRight from "../assets/arrow-right.png";

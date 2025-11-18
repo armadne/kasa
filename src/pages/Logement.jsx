@@ -31,8 +31,6 @@ function Logement() {
               ))}
             </div>
           </div>
-
-          {/* 🔹 Regroupement Profile + Rating */}
           <div className="profile-rating">
             <Profile name={host.name} picture={host.picture} />
             <Rating rating={rating} />
