@@ -20,7 +20,7 @@
     }
 
     .collapse-arrow {
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
       font-size: 1.2rem;
     }
 
@@ -30,9 +30,31 @@
   }
 
   .collapse-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  background-color: #f7f7f7;
+  line-height: 1.5;
+
+  
+  transition:
+    
+    
+    padding 0.5s ease;
+}
+
+&.open .collapse-content {
+  max-height: 500px;
+  opacity: 1;
+  padding: 1rem;
+}
+
+  
+
+  &.open .collapse-content {
+    max-height: 500px;
+    opacity: 1;
     padding: 1rem;
-    color: #333;
-    background-color: #f7f7f7;
-    line-height: 1.5;
   }
 }

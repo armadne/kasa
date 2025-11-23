@@ -37,9 +37,9 @@
 /* ✅ Responsive : mode smartphone */
 @media screen and (max-width: 768px) {
   .slider {
-    width: 335px;
+    width: 100%;           
+    margin: 1 1rem;        
     height: 255px;
-    margin: 20px auto 0; /* 🔥 réduit l’espace au-dessus du slider */
     position: relative;
 
     &__image {

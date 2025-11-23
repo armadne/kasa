@@ -209,8 +209,17 @@
       margin-top: 1rem;
 
       .collapse {
-        width: 100%; // ✅ prend toute la largeur sur mobile
+        width: 100%; 
       }
     }
   }
 }
+
+  @media (max-width: 768px) {
+
+
+    .slider__counter {
+      display: none;
+    }
+  }
+

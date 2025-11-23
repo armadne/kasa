@@ -15,7 +15,8 @@ function Collapse({ title, content }) {
           className={`collapse-arrow ${open ? "rotated" : ""}`}
         />
       </div>
-      {open && <div className="collapse-content">{content}</div>}
+
+      <div className="collapse-content">{content}</div>
     </div>
   );
 }
